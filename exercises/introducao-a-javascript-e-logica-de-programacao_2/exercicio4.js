@@ -7,3 +7,9 @@ for (let index = 0; index < numbers.length; index += 1) {
 
 resultado = resultado / 10;
 console.log('A média aritmética dos valores no array é: ' + resultado);
+
+if (resultado > 20){
+    console.log('Valor maior que 20');
+} else {
+    console.log('Valor menor que 20');
+}
