@@ -4,7 +4,6 @@ let c = 3;
 let moduloUm;
 let moduloDois;
 let moduloTres;
-let condicao;
 
 
 moduloUm = (a % 2 == 0);
