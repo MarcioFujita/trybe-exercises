@@ -1,6 +1,6 @@
   
   function ehPalindromo(palavra) {
-    let inverte = palavra.split("").reverse().join("");
+    let inverte = palavra.split('').reverse().join('');
     if (inverte === palavra) {
       return true;
     } else {
