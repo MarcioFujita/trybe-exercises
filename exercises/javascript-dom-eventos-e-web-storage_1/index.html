@@ -46,11 +46,7 @@
     Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
     - document.getElementById()
     - document.getElementsByClassName()
-    - document.getElementsByTagName()
-    
-
-    
-    6. Crie uma função que exiba o conteúdo de todas as tags <p> no console.
+    - document.getElementsByTagName()   
     */
 
       // 1. Crie uma função que mude o texto na tag <p> para uma descrição de como você se vê daqui a 2 anos.(Não gaste tempo pensando no texto, e sim realizando o exercício)
@@ -89,13 +85,20 @@
           for (let index = 0; index < document.getElementsByTagName('p').length; index +=1) {
             stringConv = document.getElementsByTagName('p')[index].innerText;
             upper = stringConv.toUpperCase();
-            console.log(upper);
             document.getElementsByTagName('p')[index].innerText = upper;
           }
       }
       toAllCaps();
 
-
+      //6. Crie uma função que exiba o conteúdo de todas as tags <p> no console.
+      function showContent() {
+          let conteudo = '';
+          for (let index = 0; index < document.getElementsByTagName('p').length; index +=1) {
+            conteudo = document.getElementsByTagName('p')[index].innerText;
+            console.log(conteudo);
+          }
+      }
+      showContent();
 
     </script>
   </body>
