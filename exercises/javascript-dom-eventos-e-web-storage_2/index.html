@@ -111,9 +111,10 @@
 
 
      // 9- Adicione 3 tags h3 , todas sendo filhas do div criado no passo 2.
-     const add3H3 = document.createElement('h3');
      for (let index = 1; index < 4; index += 1) {
-     addTagClasse.appendChild(add3H3);
+        const add3H3 = document.createElement('h3');
+        add3H3.innerText = 'texto';
+        addTagClasse.appendChild(add3H3);
      }
 
 
@@ -127,20 +128,28 @@
      // 2.2- Adicione a classe description nas 3 tags h3 criadas;
      const addClassH3 = document.getElementsByTagName('h3');
      for (let index = 1; index < 4; index += 1) {
-         addClassH3[index].className = 'description';
+        addClassH3.className = 'description';
      }
 
 
      // 2.3- Remova o div criado no passo 5 (aquele que possui a classe left-content ). Utilize a função .removeChild() ;
+     //const retiraDiv = document.getElementsByClassName('left-content')[0];
+     //addTagClasse.removeChild(retiraDiv);
 
 
      // 2.4- Centralize o div criado no passo 6 (aquele que possui a classe right-content ). Dica: para centralizar, basta configurar o margin-right: auto do div ;
+     const centralizeDiv = document.getElementsByClassName('right-content')[0];
+     centralizeDiv.style.marginRight='auto';
 
 
      // 2.5- Troque a cor de fundo do elemento pai da div criada no passo 3 (aquela que possui a classe center-content ) para a cor verde;
+     const trocaCor = document.getElementsByClassName('center-content')[0];
+     trocaCor.parentNode.style.backgroundColor = 'green';
 
 
      // 2.6- Remova os dois últimos elementos ( nove e dez ) da lista criada no passo 8.
+     listNOrdem.lastChild.remove();
+     listNOrdem.lastChild.remove();
 
 
 
