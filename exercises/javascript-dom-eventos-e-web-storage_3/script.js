@@ -43,3 +43,32 @@ function createDaysOfTheWeek() {
       }
   }
   createDaysMonth();
+
+  //Ex2:
+  function createHolidayButton(buttonName) {
+    let buttonContainer = document.querySelector('.buttons-container');
+    let newButton = document.createElement('button');
+    let newButtonID = 'btn-holiday';
+  
+    newButton.innerHTML = buttonName;
+    newButton.id = newButtonID;
+    buttonContainer.appendChild(newButton);
+  };
+  createHolidayButton('Feriados');
+
+
+  //Ex3:
+  let buttonClick = document.querySelector('#btn-holiday');
+  let daysHolidays = document.querySelectorAll('.holiday');
+  let color1 = 'rgb(238, 238, 238)';
+  let color2 = 'rgb(107, 229, 119)';
+  function changeHolidayColor(){
+      for (let index = 0; index < daysHolidays.length; index += 1){
+        if (daysHolidays[index].style.backgroundColor === color1){
+            daysHolidays[index].style.backgroundColor = color2;
+        } else {
+            daysHolidays[index].style.backgroundColor = color1;
+        }
+      } 
+  }
+  buttonClick.addEventListener('click', changeHolidayColor);
