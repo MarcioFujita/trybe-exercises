@@ -72,3 +72,33 @@ function createDaysOfTheWeek() {
       } 
   }
   buttonClick.addEventListener('click', changeHolidayColor);
+
+
+  //Ex4:
+  function createFridayButton(buttonName2) {
+    let sexta = 'Sexta-Feira'
+    let buttonFriday = document.querySelector('.buttons-container');
+    let newButton2 = document.createElement('button');
+    let newButtonId2 = 'btn-friday';
+    newButton2.innerHTML = buttonName2;
+    newButton2.id = newButtonId2;
+    buttonFriday.appendChild(newButton2); 
+  }
+  createFridayButton('Sexta-Feira');
+
+
+  //Ex5:
+  let sextou = document.querySelector('#btn-friday');
+  let days2 = document.querySelectorAll('.friday');
+  let palavra = 'SEXTOU!';
+  let days22 = [4, 11, 18, 25];
+  function modFriday() {   
+      for (let index = 0; index < days2.length; index += 1){
+          if (days2[index] !== palavra) {
+            days2[index].innerText = palavra;
+          } else {
+            days2[index].innerText = days22[index];
+          }
+      }
+  }
+  sextou.addEventListener('click', modFriday);
