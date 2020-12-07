@@ -9,46 +9,107 @@
   };
   createBackgroundButton('Cor de Fundo');
 
-  function createBackgroundButton(buttonName) {
-    let botao = document.querySelector('.buttons-container');
-    let newButton = document.createElement('button');
-    let newButtonID = 'btn-CorDoTexto';
+  function createTextButton(buttonName2) {
+    let botao2 = document.querySelector('.buttons-container');
+    let newButton2 = document.createElement('button');
+    let newButtonID2 = 'btn-CorDoTexto';
   
-    newButton.innerHTML = buttonName;
-    newButton.id = newButtonID;
-    botao.appendChild(newButton);
+    newButton2.innerHTML = buttonName2;
+    newButton2.id = newButtonID2;
+    botao2.appendChild(newButton2);
   };
-  createBackgroundButton('Cor do Texto');
+  createTextButton('Cor do Texto');
   
-  function createBackgroundButton(buttonName) {
-    let botao = document.querySelector('.buttons-container');
-    let newButton = document.createElement('button');
-    let newButtonID = 'btn-TamanhoDaFonte';
+  function createTextSizeButton(buttonName3) {
+    let botao3 = document.querySelector('.buttons-container');
+    let newButton3 = document.createElement('button');
+    let newButtonID3 = 'btn-TamanhoDaFonte';
   
-    newButton.innerHTML = buttonName;
-    newButton.id = newButtonID;
-    botao.appendChild(newButton);
+    newButton3.innerHTML = buttonName3;
+    newButton3.id = newButtonID3;
+    botao3.appendChild(newButton3);
   };
-  createBackgroundButton('Tamanho da Fonte');
+  createTextSizeButton('Tamanho da Fonte');
 
-  function createBackgroundButton(buttonName) {
+  function createSpaceButton(buttonName4) {
     let botao = document.querySelector('.buttons-container');
     let newButton = document.createElement('button');
-    let newButtonID = 'btn-EspacoEntreLinhas';
+    let newButtonID4 = 'btn-EspacoEntreLinhas';
   
-    newButton.innerHTML = buttonName;
-    newButton.id = newButtonID;
+    newButton.innerHTML = buttonName4;
+    newButton.id = newButtonID4;
     botao.appendChild(newButton);
   };
-  createBackgroundButton('Espaço entre Linhas');
+  createSpaceButton('Espaço entre Linhas');
 
-  function createBackgroundButton(buttonName) {
+  function createTypeButton(buttonName5) {
     let botao = document.querySelector('.buttons-container');
     let newButton = document.createElement('button');
-    let newButtonID = 'btn-TipoFonte';
+    let newButtonID5 = 'btn-TipoFonte';
   
-    newButton.innerHTML = buttonName;
-    newButton.id = newButtonID;
+    newButton.innerHTML = buttonName5;
+    newButton.id = newButtonID5;
     botao.appendChild(newButton);
   };
-  createBackgroundButton('Tipo da Fonte');
+  createTypeButton('Tipo da Fonte');
+
+  let buttonCor = document.querySelector('#btn-CorDeFundo');
+  let bodyStyle = document.querySelector('body');
+  let containerStyle = document.querySelector('.buttons-container');
+  let color1 = 'rgb(238, 238, 238)';
+  let color2 = 'rgb(61, 61, 61)';
+  function changeBackground() {
+      if (bodyStyle.style.backgroundColor === color1){
+        bodyStyle.style.backgroundColor = color2;
+        containerStyle.style.backgroundColor = color2;
+      } else {
+        bodyStyle.style.backgroundColor = color1;
+        containerStyle.style.backgroundColor = color1;
+      }
+  }
+  buttonCor.addEventListener('click', changeBackground);
+  
+  let textColor = document.querySelectorAll('.text');
+  let buttonColorText = document.querySelector('#btn-CorDoTexto');
+  let color3 = 'rgb(238, 238, 238)';
+  let color4 = 'rgb(0, 0, 0)';
+  function textColorChange(){
+      for (index = 0; index < textColor.length; index += 1){
+        if (textColor[index].style.color === color4){
+          textColor[index].style.color = color3;
+        } else {
+          textColor[index].style.color = color4;
+        }
+      }
+  }
+  buttonColorText.addEventListener('click', textColorChange);
+
+  let buttonFontSize = document.querySelector('#btn-TamanhoDaFonte');
+  let textSize = document.querySelectorAll('.text');
+  let size1 = '16px';
+  let size2 = '20px';
+  function fontSizeChange() {
+      for (index = 0; index < textSize.length; index += 1){
+        if (textSize[index].style.fontSize === size1){
+          textColor[index].style.fontSize = size2;
+        } else {
+          textColor[index].style.fontSize = size1;
+        }
+      }
+  }
+  buttonFontSize.addEventListener('click', fontSizeChange);
+
+  let buttonLineSpace = document.querySelector('#btn-EspacoEntreLinhas');
+  let lineSpace = document.querySelectorAll('.text');
+  let size3 = '18px';
+  let size4 = '24px';
+  function lineSpaceChange() {
+      for (index = 0; index < lineSpace.length; index += 1){
+        if (lineSpace[index].style.lineHeight === size3){
+            lineSpace[index].style.lineHeight = size4;
+        } else {
+            lineSpace[index].style.lineHeight = size3;
+        }
+      }
+  }
+  buttonLineSpace.addEventListener('click', lineSpaceChange);
