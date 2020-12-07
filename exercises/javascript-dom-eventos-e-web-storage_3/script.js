@@ -91,7 +91,7 @@ function createDaysOfTheWeek() {
   let sextou = document.querySelector('#btn-friday');
   let days2 = document.querySelectorAll('.friday');
   let palavra = 'SEXTOU!';
-  let days22 = [4, 11, 18, 25];
+  let days22 = document.querySelectorAll('.friday');
   function modFriday() {   
       for (let index = 0; index < days2.length; index += 1){
           if (days2[index] !== palavra) {
