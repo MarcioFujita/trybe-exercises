@@ -1,13 +1,50 @@
-  window.onload = function() {
+window.onload = function() {
       let backGr = localStorage.getItem('backGround');
-      let textClr = localStorage.getItem('textColor');
+      let textColr = localStorage.getItem('textColor');
       let textSze = localStorage.getItem('textSize');
       let lineSpc = localStorage.getItem('lineSpacing');
       let fontStyl = localStorage.getItem('fontStyle');
-      If (backGr === null) {
-        localStorage.setItem('backGround', 'white');
+      
+      if (backGr === 'dark') {
+        let bodyStyl = document.querySelector('body');
+        let containerStyl = document.querySelector('.buttons-container');
+        let colr2 = 'rgb(61, 61, 61)';
+        bodyStyl.style.backgroundColor = colr2;
+        containerStyl.style.backgroundColor = colr2;
       }
-  }
+
+      if (textColr === 'white') {
+        let txtColor = document.querySelectorAll('.text');
+        let colr3 = 'rgb(238, 238, 238)';
+        for (index = 0; index < txtColor.length; index += 1){
+            txtColor[index].style.color = colr3;
+        }
+      }
+
+      if (textSze === 'big') {
+        let textSiz = document.querySelectorAll('.text');
+        let siz2 = '20px';
+        for (index = 0; index < textSiz.length; index += 1){
+            textSiz[index].style.fontSize = siz2;
+        }
+      }
+
+      if (lineSpc === 'big') {
+        let lineSpac = document.querySelectorAll('.text');
+        let size4 = '24px';
+        for (index = 0; index < lineSpac.length; index += 1){
+                lineSpac[index].style.lineHeight = size4;
+        }
+      }
+
+      if (fontStyl === 'Arial') {
+        let fntKind = document.querySelectorAll('.text');
+        let fnt2 = 'Arial';
+        for (index = 0; index < fntKind.length; index += 1){
+            fntKind[index].style.fontFamily = fnt2;
+        }
+      }
+  
   
   function createBackgroundButton(buttonName) {
     let botao = document.querySelector('.buttons-container');
@@ -43,24 +80,24 @@
   createTextSizeButton('Tamanho da Fonte');
 
   function createSpaceButton(buttonName4) {
-    let botao = document.querySelector('.buttons-container');
-    let newButton = document.createElement('button');
+    let botao4 = document.querySelector('.buttons-container');
+    let newButton4 = document.createElement('button');
     let newButtonID4 = 'btn-EspacoEntreLinhas';
   
-    newButton.innerHTML = buttonName4;
-    newButton.id = newButtonID4;
-    botao.appendChild(newButton);
+    newButton4.innerHTML = buttonName4;
+    newButton4.id = newButtonID4;
+    botao4.appendChild(newButton4);
   };
   createSpaceButton('Espaço entre Linhas');
 
   function createTypeButton(buttonName5) {
-    let botao = document.querySelector('.buttons-container');
-    let newButton = document.createElement('button');
+    let botao5 = document.querySelector('.buttons-container');
+    let newButton5 = document.createElement('button');
     let newButtonID5 = 'btn-TipoFonte';
   
-    newButton.innerHTML = buttonName5;
-    newButton.id = newButtonID5;
-    botao.appendChild(newButton);
+    newButton5.innerHTML = buttonName5;
+    newButton5.id = newButtonID5;
+    botao5.appendChild(newButton5);
   };
   createTypeButton('Tipo da Fonte');
 
@@ -149,3 +186,4 @@
       }
   }
   buttonKindOfFont.addEventListener('click', fontChange);
+}
