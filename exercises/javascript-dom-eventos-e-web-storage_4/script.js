@@ -1,3 +1,14 @@
+  window.onload = function() {
+      let backGr = localStorage.getItem('backGround');
+      let textClr = localStorage.getItem('textColor');
+      let textSze = localStorage.getItem('textSize');
+      let lineSpc = localStorage.getItem('lineSpacing');
+      let fontStyl = localStorage.getItem('fontStyle');
+      If (backGr === null) {
+        localStorage.setItem('backGround', 'white');
+      }
+  }
+  
   function createBackgroundButton(buttonName) {
     let botao = document.querySelector('.buttons-container');
     let newButton = document.createElement('button');
@@ -62,9 +73,11 @@
       if (bodyStyle.style.backgroundColor === color1){
         bodyStyle.style.backgroundColor = color2;
         containerStyle.style.backgroundColor = color2;
+        localStorage.setItem('backGround', 'dark');
       } else {
         bodyStyle.style.backgroundColor = color1;
         containerStyle.style.backgroundColor = color1;
+        localStorage.setItem('backGround', 'white');
       }
   }
   buttonCor.addEventListener('click', changeBackground);
@@ -77,8 +90,10 @@
       for (index = 0; index < textColor.length; index += 1){
         if (textColor[index].style.color === color4){
           textColor[index].style.color = color3;
+          localStorage.setItem('textColor', 'white');
         } else {
           textColor[index].style.color = color4;
+          localStorage.setItem('textColor', 'dark');
         }
       }
   }
@@ -92,8 +107,10 @@
       for (index = 0; index < textSize.length; index += 1){
         if (textSize[index].style.fontSize === size1){
           textColor[index].style.fontSize = size2;
+          localStorage.setItem('textSize', 'big');
         } else {
           textColor[index].style.fontSize = size1;
+          localStorage.setItem('textSize', 'small');
         }
       }
   }
@@ -107,9 +124,28 @@
       for (index = 0; index < lineSpace.length; index += 1){
         if (lineSpace[index].style.lineHeight === size3){
             lineSpace[index].style.lineHeight = size4;
+            localStorage.setItem('lineSpacing', 'big');
         } else {
             lineSpace[index].style.lineHeight = size3;
+            localStorage.setItem('lineSpacing', 'small');
         }
       }
   }
   buttonLineSpace.addEventListener('click', lineSpaceChange);
+
+  let buttonKindOfFont = document.querySelector('#btn-TipoFonte');
+  let fontKind = document.querySelectorAll('.text');
+  let font1 = 'Verdana';
+  let font2 = 'Arial';
+  function fontChange() {
+      for (index = 0; index < fontKind.length; index += 1){
+        if (fontKind[index].style.fontFamily === font1){
+            fontKind[index].style.fontFamily = font2;
+            localStorage.setItem('fontStyle', 'Arial');
+        } else {
+            fontKind[index].style.fontFamily = font1;
+            localStorage.setItem('fontStyle', 'Verdana');
+        }
+      }
+  }
+  buttonKindOfFont.addEventListener('click', fontChange);
