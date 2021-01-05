@@ -53,6 +53,35 @@
                     <input id='cidade' class="input" type='text' maxlength='28' required>
                 </div>
 
+                <!-- Estado -->
+                <div class="field">
+                    <label for='estado' class="label">Estado:</label>
+                    <div class="select is-rounded">
+                        <select name='estado' id='estado' required>   
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Tipo de Morada -->
+                <div class="field">
+                    <p class="label">Tipo de moradia:</p>
+                    <label class="radio" for='tipo-moradia-casa'>
+                        <input type="radio" name='moradia' id='tipo-moradia-casa' value='casa'> Casa
+                    </label>
+                    <label class="radio" for='tipo-moradia-apartamento'>
+                        <input type="radio" name='moradia' id='tipo-moradia-apartamento' value='apartamento'> Apartamento
+                    </label>
+                </div>
+
+                <hr>
+
+                <!-- Subtítulo 2 -->
+                <div class="field">
+                    <h3 class="title is-3 has-text-centered">Dados do Último Emprego</h3>
+                </div>
+
+
+
 
 
 
@@ -63,30 +92,7 @@
 
 
     <form action='' class='form-cv' method='GET'>
-        <div class='dados-pessoais'>
-            <fieldset class='fieldset-dados-pessoais'>
-                <br>
-
-                <br>
-                
-                <br>
-                
-                <br>
-                
-                <br>
-                <label for='estado'>Estado:</label>
-                <select name='estado' id='estado' class='estado' required>   
-                </select>
-                <br>
-                <label for='tipo-morada'>Casa / Apartamento:</label>
-                <input type='radio' name='tipo-morada' id='tipo-morada-casa' value='casa' checked>
-                <label for='tipo-morada-casa'>Casa</label>
-                <input type='radio' name='tipo-morada' id='tipo-morada-apartamento' value='apartamento'>
-                <label for='tipo-morada-apartamento'>Apartamento</label>
-                <br>
-            </fieldset>
-            <hr>
-        </div>
+        
         <div class='ultimo emprego'>
             <fieldset class='ultimo emprego'>
                 <legend>Último emprego</legend>
