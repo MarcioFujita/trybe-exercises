@@ -62,7 +62,7 @@
                     </div>
                 </div>
 
-                <!-- Tipo de Morada -->
+                <!-- Tipo de Moradia -->
                 <div class="field">
                     <p class="label">Tipo de moradia:</p>
                     <label class="radio" for='tipo-moradia-casa'>
@@ -72,12 +72,25 @@
                         <input type="radio" name='moradia' id='tipo-moradia-apartamento' value='apartamento'> Apartamento
                     </label>
                 </div>
+                <br>
 
                 <hr>
 
                 <!-- Subtítulo 2 -->
                 <div class="field">
                     <h3 class="title is-3 has-text-centered">Dados do Último Emprego</h3>
+                </div>
+
+                <!-- Último Emprego -->
+                <div class="field">
+                    <label for="resumo" class="label">Resumo do currículo:</label>
+                    <textarea name="resumo" id="resumo" class="textarea" cols="30" rows="10" placeholder='Coloque aqui o resumo de seu currículo' required></textarea>
+                </div>
+
+                <!-- Cargo -->
+                <div class="field">
+                    <label for='cargo' class="label">Cargo:</label>
+                    <input id='cargo' class="input" type='text' maxlength='40' required>
                 </div>
 
 
@@ -95,12 +108,10 @@
         
         <div class='ultimo emprego'>
             <fieldset class='ultimo emprego'>
-                <legend>Último emprego</legend>
-                <label for="resumo">Resumo do currículo:</label>
-                <textarea name="resumo" id="resumo" cols="30" rows="10" required></textarea>
+               
+                
                 <br>
-                <label for='cargo'>Cargo:</label>
-                <input id='cargo' type='text' maxlength='40' required>
+                
                 <br>
                 <label for='desc-cargo'>Descrição do cargo:</label>
                 <input id='desc-cargo' type='text' maxlength='500' required>
