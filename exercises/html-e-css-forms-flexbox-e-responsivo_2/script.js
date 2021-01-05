@@ -13,4 +13,22 @@ window.onload = function () {
         }
     }
     populateComboEstados();
+
+    const date = document.getElementById('data-inicio');
+    function dateValidate(){
+        const valueDate = date.value;
+        const result = valueDate.split('/');
+        if (result.length != 3){
+            alert('Favor utilizar / para separar dia, mes e ano');
+        } else {
+            if (result[0] < 1 || result[0] > 31){
+              alert('O dia deve ser MAIOR que ZERO e MENOR que 31');
+            } else if (result[1] < 1 || result[1] > 12) {
+                alert('O mes deve ser MAIOR que ZERO e MENOR que 12');
+            } else if (result[2] < 0) {
+            alert('O ano não pode ser negativo')
+            }
+        }
+    }
+    date.addEventListener('blur', dateValidate)
 }
