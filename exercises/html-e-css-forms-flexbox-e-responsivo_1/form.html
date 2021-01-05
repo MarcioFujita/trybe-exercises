@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Currículo</title>
+    <link rel='stylesheet' type='text/css' href='styles.css'>
+    <script type='text/javascript' src='script.js'></script>
 </head>
 <body>
     <header class='cv-header'>
@@ -25,7 +27,19 @@
                 <label for='endereco'>Endereço:</label>
                 <input id='endereco' type='text' maxlength='200' required>
                 <br>
-                
+                <label for='cidade'>Cidade:</label>
+                <input id='cidade' type='text' maxlength='28' required>
+                <br>
+                <label for='estado'>Estado:</label>
+                <select name='estado' id='estado' class='estado' required>   
+                </select>
+                <br>
+                <label for='tipo-morada'>Casa / Apartamento:</label>
+                <input type='radio' name='tipo-morada' id='tipo-morada-casa' value='casa'>
+                <label for='tipo-morada-casa'>Casa</label>
+                <input type='radio' name='tipo-morada' id='tipo-morada-apartamento' value='apartamento'>
+                <label for='tipo-morada-apartamento'>Apartamento</label>
+                <br>
             </fieldset>
         </div>
     </form>
