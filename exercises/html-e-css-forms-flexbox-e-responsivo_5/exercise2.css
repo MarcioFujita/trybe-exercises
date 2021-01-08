@@ -1,0 +1,42 @@
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  body {
+      margin: 10px 12px;
+  }
+
+  header nav {
+    display: none;
+  }
+
+  .container {
+      align-content: center;
+  }
+
+  .labels {
+      text-align: center;
+  }
+
+  header p {
+      font-size: 20px;
+  }
+
+  .aside-one li {
+      font-size: 17px;
+  }
+
+  article p {
+      font-size: 19px;
+  }
+
+  .footer-info {
+    align-self: flex-start;
+  }
+
+  .disclaimer {
+      font-size: 12px;
+  }
