@@ -14,6 +14,7 @@ img {
 
 figure {
     margin: 0;
+    margin: 10px 10px;
 }
 
 p {
@@ -22,10 +23,6 @@ p {
 
 figure figcaption {
     font-size: 15px;
-}
-
-figure {
-    margin: 10px 10px;
 }
 
 @media screen and (min-width: 800px) {
@@ -50,7 +47,7 @@ figure {
         width: auto;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content:flex-end;
     }
 
     .imgs figure {
@@ -62,7 +59,8 @@ figure {
 @media screen and (min-width: 1300px) {
     body {
         background-color: rgb(194, 226, 130);
-        margin: 20px 20px;
+        margin: 25px 35px;
+        /* max-width: 1300px; */
     }
     h1 {
         font-size: 35px;
