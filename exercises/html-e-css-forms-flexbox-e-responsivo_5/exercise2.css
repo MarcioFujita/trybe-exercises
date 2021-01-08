@@ -33,10 +33,12 @@ html {
       font-size: 19px;
   }
 
-  .footer-info {
-    align-self: flex-start;
-  }
-
   .disclaimer {
       font-size: 12px;
+  }
+
+  @media screen and (min-width: 800px) {
+      body {
+          background-color: rgb(155, 241, 241);
+      }
   }
