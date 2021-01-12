@@ -1,3 +1,4 @@
+// Exercício 1
 const fatorial = (numero) => {
     let result = 0;
     let numFor = numero - 1
@@ -8,6 +9,7 @@ const fatorial = (numero) => {
 }
 fatorial(4);
 
+// Exercício 2
 const maiorPalavra = (frase) => {
     let separado = frase.split(' ');
     let resultadoParcial = '';
