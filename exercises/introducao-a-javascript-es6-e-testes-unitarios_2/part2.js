@@ -51,3 +51,6 @@ const totalStudents = (obj) => {
 }
 console.log(totalStudents(allLessons));
  
+// Exercicio 7
+const getValueByNumber = (obj,number) => Object.values(obj)[number];
+console.log(getValueByNumber(lesson2, 0));
