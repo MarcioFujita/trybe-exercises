@@ -17,3 +17,11 @@ const lesson1 = {
     professor: 'Maria Clara',
     turno: 'noite',
   };
+
+  const addManha = (obj, key, value) => {
+      obj[key] = value;
+  }
+  addManha(lesson2, 'turno', 'manhã');
+  
+  const listKey = (obj) => Object.keys(obj);
+  console.log(listKey(lesson2));
