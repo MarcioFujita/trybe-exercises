@@ -44,7 +44,7 @@ console.log(allLessons);
 const totalStudents = (obj) => {
     let total = 0;
     const temp = Object.keys(obj);
-    for (index = 0; index < temp.length; index += 1) {
+    for (let index = 0; index < temp.length; index += 1) {
         total = total + obj[temp[index]].numeroEstudantes;
     }
     return total;
@@ -54,3 +54,14 @@ console.log(totalStudents(allLessons));
 // Exercicio 7
 const getValueByNumber = (obj,number) => Object.values(obj)[number];
 console.log(getValueByNumber(lesson2, 0));
+
+// Exercicio 8
+const pairVer = (obj, key, value) => {
+    const temp = Object.entries(obj);
+    let isEqual = false;
+    for (let index = 0; index < temp.length; index += 1) {
+      if (temp[index][0] === key && temp[index][1] === value) isEqual = true;
+    }
+    return isEqual;
+  };
+  console.log(pairVer(lesson2,'professor','Carlos'));
