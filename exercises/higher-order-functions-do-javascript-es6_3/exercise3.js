@@ -67,6 +67,8 @@ const expectedResult = 43;
 
 function averageAge() {
   // escreva seu código aqui
+  const ages = books.map(book => book.releaseYear - book.author.birthYear);
+  return ages.reduce((previousValue, currentValue) => (previousValue + currentValue)) / ages.length;
 }
 
 assert.strictEqual(averageAge(), expectedResult);
