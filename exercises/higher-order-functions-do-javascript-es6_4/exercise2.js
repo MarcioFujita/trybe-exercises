@@ -7,10 +7,11 @@ const { SourceMap } = require('module')
 // escreva sum abaixo
 
 const sum = (...numbers) => {
-    const sumReduced = numbers.reduce((acc, curr) => {
-        return acc + curr;
-    }, 0);
-    return sumReduced;
+    // const sumReduced = numbers.reduce((acc, curr) => {
+    //     return acc + curr;
+    // }, 0);
+    // return sumReduced;
+    return numbers.reduce((acc, curr) => (acc + curr), 0);
 }
 
 assert.strictEqual(sum(), 0)
