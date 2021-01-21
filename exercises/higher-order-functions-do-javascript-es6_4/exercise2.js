@@ -2,8 +2,16 @@
 // Dica: use parâmetro rest .
 
 const assert = require('assert')
+const { SourceMap } = require('module')
 
 // escreva sum abaixo
+
+const sum = (...numbers) => {
+    const sumReduced = numbers.reduce((acc, curr) => {
+        return acc + curr;
+    }, 0);
+    return sumReduced;
+}
 
 assert.strictEqual(sum(), 0)
 assert.strictEqual(sum(1), 1)
