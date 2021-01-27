@@ -30,3 +30,5 @@ console.log(planetDistanceFromSun(venus)); // B
 console.log(planetDistanceFromSun(jupiter)); // C
 
 // Dado o código abaixo, qual a ordem de finalização de execução das linhas comentadas?
+
+// Resp: A, B e C.
