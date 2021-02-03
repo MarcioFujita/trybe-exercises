@@ -4,7 +4,7 @@
   "description": "",
   "main": "part1Exercise1.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --watchAll"
   },
   "keywords": [],
   "author": "",
