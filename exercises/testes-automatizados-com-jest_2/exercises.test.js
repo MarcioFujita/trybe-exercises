@@ -24,3 +24,18 @@ describe('Ex2: Testing function findUserById', () => {
         });
     });
 });
+
+describe('Ex3: Testing function findUserById with async/await', () => {
+    it('receives an id and should return an user(.them)', async () => {
+        expect.assertions(1);
+        const user = await findUserById(4);
+            expect(user.name).toEqual('Mark');
+    });
+    it('receives an invalid id and should return an error(.catch)', async () => {
+        try {
+            await findUserById(3);
+        } catch (error) {
+            expect(error).toEqual({ error: 'User with 3 not found.' });
+        }
+    });
+});
