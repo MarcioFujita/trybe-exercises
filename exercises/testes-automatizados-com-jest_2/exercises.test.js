@@ -1,6 +1,5 @@
 
-const { it, expect } = require('@jest/globals');
-const { uppercase, findUserById } = require('./exercises');
+const { uppercase, findUserById, getRepos, getAnimal } = require('./exercises');
 
 describe('EX1: Testing function uppercase', () => {
     it('receives a string and should convert it to uppercase', (done) => {
@@ -38,4 +37,34 @@ describe('Ex3: Testing function findUserById with async/await', () => {
             expect(error).toEqual({ error: 'User with 3 not found.' });
         }
     });
+});
+
+describe('EX4: Testing function getRepos', () => {
+    it('checks if function returns correct projects', () => {
+        const url = 'https://api.github.com/orgs/tryber/repos';
+        return getRepos(url).then(data => {
+            expect(data).toContain('sd-01-week4-5-project-todo-list');
+            expect(data).toContain('sd-01-week4-5-project-meme-generator');
+      });
+    });
+});
+
+describe('EX6: Testing function getAnimal', () => {
+    describe('Animal name exists', () => {
+      it('Returns animal', () => {
+        expect.assertions(1);
+        return getAnimal('Dorminhoco').then(animal => {
+          expect(animal).toEqual({ name: 'Dorminhoco', age: 1, type: 'Dog' });
+        });
+      });
+    });
+});
+  
+describe('When there isn´t an animal with this name', () => {
+      test('Returns error', () => {
+        expect.assertions(1);
+        return getAnimal('Bob').catch(error =>
+          expect(error).toEqual('Nenhum animal com esse nome!')
+        );
+      });
 });
