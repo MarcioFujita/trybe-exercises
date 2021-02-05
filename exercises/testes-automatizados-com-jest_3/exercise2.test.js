@@ -8,6 +8,8 @@ describe('Ex2: Testing new implementation', () => {
         exercise2.rng = jest.fn().mockImplementation((a, b) => a / b);
 
         expect(exercise2.rng(6, 3)).toBe(2);
+        expect(exercise2.rng).toHaveBeenCalled();
         expect(exercise2.rng).toHaveBeenCalledTimes(1);
+        expect(exercise2.rng).toHaveBeenCalledWith(6, 3);
     });
 });
